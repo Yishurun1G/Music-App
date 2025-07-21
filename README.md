@@ -1,41 +1,57 @@
-# 🎵 Music Player App
+# Music Management App 🎵
 
-A full-featured React music player built with manual Webpack configuration, React, and Tailwind CSS. Displays songs, genres, top global music, and allows users to like tracks and manage playlists.
+This is a full-stack music management app built for the Addis Software Summer Internship test project. It supports listing, creating, updating, and deleting songs using a REST API.
+
+##  Technologies Used
+
+- React (Manual setup with Webpack)
+- Redux Toolkit
+- Redux-Saga
+- Tailwind CSS v3.4.17
+- Emotion / Styled System
+- React Router DOM
+- Webpack
+- Axios
 
 ##  Features
 
-- Top global music from iTunes RSS
-- Recently Played section
-- Liked Songs page
-- Genre and Album pages
-- Playlist creation
-- Responsive and stylish UI
-- Manual Webpack setup
-- Dark & pink transparent sidebar
-
----
+- Display paginated list of songs
+- CRUD operations via API
+- Search functionality
+- Genre, Liked Songs, and Recently Played pages
+- Responsive UI with Tailwind
+- Custom component structure
 
 ##  Setup Instructions
 
-- Clone the repository
-   ```bash
-   git clone https://github.com/yourusername/music-app.git
-   cd music-app
- Webpack Configuration
-This project uses a custom Webpack configuration (no Create React App). Key highlights:
+1. Clone the repository  
+   `git clone https://github.com/YOUR-USERNAME/YOUR-REPO-NAME.git`
 
-Entry point: src/index.js
+2. Navigate into the project  
+   `cd your-repo-name`
 
-Output: dist folder
+3. Install dependencies  
+   `npm install`
 
-Babel Loader for JSX and modern JS
+4. Start development server  
+   `npm run start`
 
-CSS & Tailwind: PostCSS with Tailwind v3.4.17
+5. Build for production  
+   `npm run build`
 
-Assets: Supports image file imports (JPG, PNG, SVG)
+## Webpack Configuration
 
-Environment Variables: Defined using DefinePlugin
+- Manual React setup using Webpack 5.
+- Webpack supports:
+  - Environment variables (via dotenv-webpack)
+  - SVG and image loading
+  - CSS and Emotion styling
+- Aliases set for cleaner imports
+- Babel used for JSX and modern JavaScript support
 
-Dev Server: Configured via webpack-dev-server with hot reload
+##  AI Usage
 
+No AI was used to write or generate the core application logic or code. ChatGPT was occasionally used for debugging suggestions and UI layout ideas only.
+
+## Folder Structure
 
