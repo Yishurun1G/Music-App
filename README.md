@@ -1,12 +1,67 @@
-# React + Vite
+# 🎵 Music Player App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-featured React music player built with manual Webpack configuration, React, and Tailwind CSS. Displays songs, genres, top global music, and allows users to like tracks and manage playlists.
 
-Currently, two official plugins are available:
+##  Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Top global music from iTunes RSS
+- Recently Played section
+- Liked Songs page
+- Genre and Album pages
+- Playlist creation
+- Responsive and stylish UI
+- Manual Webpack setup
+- Dark & pink transparent sidebar
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+##  Setup Instructions
+
+- Clone the repository
+   ```bash
+   git clone https://github.com/yourusername/music-app.git
+   cd music-app
+ Webpack Configuration
+This project uses a custom Webpack configuration (no Create React App). Key highlights:
+
+Entry point: src/index.js
+
+Output: dist folder
+
+Babel Loader for JSX and modern JS
+
+CSS & Tailwind: PostCSS with Tailwind v3.4.17
+
+Assets: Supports image file imports (JPG, PNG, SVG)
+
+Environment Variables: Defined using DefinePlugin
+
+Dev Server: Configured via webpack-dev-server with hot reload
+
+Example snippet from webpack.config.js
+  module.exports = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /\.(js|jsx)$/,
+        use: "babel-loader",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|svg)$/i,
+        type: "asset/resource",
+      },
+    ],
+  },
+  plugins: [
+new webpack.DefinePlugin({
+ "process.env.API_BASE_URL": JSON.stringify(process.env.API_BASE_URL),
+    }),
+  ],
+};
+
