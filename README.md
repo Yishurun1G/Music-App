@@ -38,30 +38,4 @@ Environment Variables: Defined using DefinePlugin
 
 Dev Server: Configured via webpack-dev-server with hot reload
 
-Example snippet from webpack.config.js
-  module.exports = {
-  // ...
-  module: {
-    rules: [
-      {
-        test: /\.(js|jsx)$/,
-        use: "babel-loader",
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.(png|jpe?g|svg)$/i,
-        type: "asset/resource",
-      },
-    ],
-  },
-  plugins: [
-new webpack.DefinePlugin({
- "process.env.API_BASE_URL": JSON.stringify(process.env.API_BASE_URL),
-    }),
-  ],
-};
 
